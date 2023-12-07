@@ -76,11 +76,6 @@ constexpr std::array VK_FORMAT_R32G32B32_SFLOAT{
     VK_FORMAT_UNDEFINED,
 };
 
-constexpr std::array VK_FORMAT_A4B4G4R4_UNORM_PACK16{
-    VK_FORMAT_R4G4B4A4_UNORM_PACK16,
-    VK_FORMAT_UNDEFINED,
-};
-
 } // namespace Alternatives
 
 template <typename T>
