@@ -76,6 +76,11 @@ constexpr std::array VK_FORMAT_R32G32B32_SFLOAT{
     VK_FORMAT_UNDEFINED,
 };
 
+constexpr std::array VK_FORMAT_A4B4G4R4_UNORM_PACK16{
+    VK_FORMAT_R4G4B4A4_UNORM_PACK16,
+    VK_FORMAT_UNDEFINED,
+};
+
 } // namespace Alternatives
 
 template <typename T>
@@ -104,6 +109,8 @@ constexpr const VkFormat* GetFormatAlternatives(VkFormat format) {
         return Alternatives::R8G8B8_SSCALED.data();
     case VK_FORMAT_R32G32B32_SFLOAT:
         return Alternatives::VK_FORMAT_R32G32B32_SFLOAT.data();
+    case VK_FORMAT_A4B4G4R4_UNORM_PACK16_EXT:
+        return Alternatives::VK_FORMAT_A4B4G4R4_UNORM_PACK16.data();
     default:
         return nullptr;
     }
@@ -187,6 +194,7 @@ std::unordered_map<VkFormat, VkFormatProperties> GetFormatProperties(vk::Physica
         VK_FORMAT_BC7_UNORM_BLOCK,
         VK_FORMAT_D16_UNORM,
         VK_FORMAT_D16_UNORM_S8_UINT,
+        VK_FORMAT_X8_D24_UNORM_PACK32,
         VK_FORMAT_D24_UNORM_S8_UINT,
         VK_FORMAT_D32_SFLOAT,
         VK_FORMAT_D32_SFLOAT_S8_UINT,
@@ -232,6 +240,7 @@ std::unordered_map<VkFormat, VkFormatProperties> GetFormatProperties(vk::Physica
         VK_FORMAT_R32_SINT,
         VK_FORMAT_R32_UINT,
         VK_FORMAT_R4G4B4A4_UNORM_PACK16,
+        VK_FORMAT_A4B4G4R4_UNORM_PACK16_EXT,
         VK_FORMAT_R4G4_UNORM_PACK8,
         VK_FORMAT_R5G5B5A1_UNORM_PACK16,
         VK_FORMAT_R5G6B5_UNORM_PACK16,
