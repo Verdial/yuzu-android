@@ -13,7 +13,7 @@ on:
 jobs:
   android:
     runs-on: ubuntu-latest
-    if: ${{ github.repository == 'yuzu-emu/yuzu-android' }}
+    if: ${{ github.repository == 'Verdial/yuzu-android' }}
     steps:
       - uses: actions/checkout@v3
         with:
